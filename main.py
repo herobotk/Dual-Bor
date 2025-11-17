@@ -129,26 +129,40 @@ async def kill_me(_, message: Message):
 # ---- MANUAL FILTER (REPLY MODE) ----
 @bot1.on_message(filters.group & filters.reply & filters.text & ~filters.command(""))
 async def filter_reply(_, message: Message):
-    t = message.text.lower().strip()
-    if t not in FILTERS:
+    text = message.text.lower().strip()
+    matched = None
+
+    # Check if any filter key exists inside the message
+    for key in FILTERS.keys():
+        if key in text:
+            matched = key
+            break
+
+    if not matched:
         return
 
     original = message.reply_to_message
-    await send_filter(bot1, original.chat.id, original.id, FILTERS[t])
+    await send_filter(bot1, original.chat.id, original.id, FILTERS[matched])
     message.stop_propagation()
 
 
 # ---- MANUAL FILTER (DIRECT MODE) ----
 @bot1.on_message(filters.group & ~filters.reply & filters.text & ~filters.command(""))
 async def filter_direct(_, message: Message):
-    t = message.text.lower().strip()
-    if t not in FILTERS:
+    text = message.text.lower().strip()
+    matched = None
+
+    for key in FILTERS.keys():
+        if key in text:    # Boss requirement: text ke andar kahin bhi match ho
+            matched = key
+            break
+
+    if not matched:
         return
 
-    await send_filter(bot1, message.chat.id, message.id, FILTERS[t])
+    await send_filter(bot1, message.chat.id, message.id, FILTERS[matched])
     message.stop_propagation()
-
-
+    
 
 # ============================================================
 #               BOT 2 — Reply Bot Only
