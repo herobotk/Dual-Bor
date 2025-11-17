@@ -114,7 +114,7 @@ FILTERS = {
     },
 
     # ============== already Uploaded ==============
-    "already Uploaded": {
+    "already uploaded": {
         "image": "https://i.ibb.co/MkVLCf92/images-1.jpg",
         "text": (
             "Dᴀᴛᴀʙᴀsᴇ Uᴘᴅᴀᴛᴇᴅ ✅\n"
