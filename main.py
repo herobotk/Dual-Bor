@@ -203,12 +203,12 @@ async def reply_bot(_, message: Message):
             except:
                 pass
 
-            sent = await message.reply("Already noted, please wait…")
+            sent = await message.reply("ᴀʟʀᴇᴀᴅʏ ɴᴏᴛᴇᴅ ✅\nᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ⏳...")
         else:
-            sent = await message.reply("Request received, uploading soon…")
+            sent = await message.reply("ʀᴇQᴜᴇꜱᴛ ʀᴇᴄᴇɪᴠᴇᴅ ✅\nᴜᴘʟᴏᴀᴅ ꜱᴏᴏɴ...✨")
 
     else:
-        sent = await message.reply("Request received, uploading soon…")
+        sent = await message.reply("ʀᴇQᴜᴇꜱᴛ ʀᴇᴄᴇɪᴠᴇᴅ ✅\nᴜᴘʟᴏᴀᴅ ꜱᴏᴏɴ...✨")
 
     user_messages[uid] = {"text": txt, "bot_msg_id": sent.id, "time": now}
 
