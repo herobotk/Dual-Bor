@@ -111,5 +111,20 @@ FILTERS = {
                 {"text": "sᴇᴀʀᴄʜ ʜᴇʀᴇ", "url": "https://t.me/movie_talk_Group"}
             ]
         ]
+    },
+
+    # ============== already Uploaded ==============
+    "already Uploaded": {
+        "image": "https://i.ibb.co/MkVLCf92/images-1.jpg",
+        "text": (
+            "Dᴀᴛᴀʙᴀsᴇ Uᴘᴅᴀᴛᴇᴅ ✅\n"
+            "Sᴇᴀʀᴄʜ ɪɴ Gʀᴏᴜᴜᴘ..🔎\n"
+            "(Cʟɪᴄᴋ ᴛʜᴇ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ👇)"
+        ),
+        "buttons": [
+            [
+                {"text": "sᴇᴀʀᴄʜ ʜᴇʀᴇ", "url": "https://t.me/movie_talk_Group"}
+            ]
+        ]
     }
 }
